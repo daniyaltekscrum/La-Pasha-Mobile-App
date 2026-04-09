@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8"></meta>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"></link>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"></link>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"></link>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#474746",
+                        "surface-variant": "#353535",
+                        "background": "#131313",
+                        "on-surface-variant": "#d3c4b0",
+                        "surface-container-highest": "#353535",
+                        "primary-fixed-dim": "#f6bd56",
+                        "on-primary-fixed": "#271900",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "outline-variant": "#4f4536",
+                        "tertiary-container": "#9a9b9b",
+                        "on-error": "#690005",
+                        "surface-dim": "#131313",
+                        "outline": "#9c8f7d",
+                        "on-secondary-container": "#b7b5b4",
+                        "primary-fixed": "#ffdeaa",
+                        "on-secondary": "#313030",
+                        "secondary-fixed": "#e5e2e1",
+                        "tertiary": "#c6c6c7",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-container-high": "#2a2a2a",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-low": "#1b1b1b",
+                        "surface": "#131313",
+                        "on-tertiary-container": "#313333",
+                        "on-primary-container": "#452e00",
+                        "inverse-surface": "#e2e2e2",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "inverse-on-surface": "#303030",
+                        "surface-container": "#1f1f1f",
+                        "on-error-container": "#ffdad6",
+                        "inverse-primary": "#7d5700",
+                        "on-secondary-fixed-variant": "#474746",
+                        "secondary": "#c8c6c5",
+                        "on-primary-fixed-variant": "#5f4100",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "error-container": "#93000a",
+                        "surface-tint": "#f6bd56",
+                        "surface-bright": "#393939",
+                        "primary-container": "#c5922f",
+                        "on-tertiary": "#2f3131",
+                        "on-primary": "#422c00",
+                        "primary": "#f6bd56",
+                        "on-surface": "#e2e2e2",
+                        "on-background": "#e2e2e2",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+
+    style style
+</head>
+
+<body class="bg-background text-on-surface selection:bg-primary/30 min-h-screen pb-32">
+    <!-- TopAppBar -->
+
+    <header class="fixed top-0 left-0 w-full z-50 
+bg-gradient-to-b from-[#242525]/90 to-[#242525]/40 
+backdrop-blur-xl border-b border-white/5 
+px-6 py-3 flex items-center justify-between shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
+        <!-- Left: Profile -->
+
+        <div class="flex items-center gap-3">
+            <!-- Avatar with Glow -->
+
+            <div class="relative">
+                <div class="absolute inset-0 rounded-full bg-[#C5922F]/30 blur-md"></div>
+
+                <div class="relative w-11 h-11 rounded-full border border-[#C5922F]/40 p-[2px]">
+                    <img src="https://plus.unsplash.com/premium_photo-1689539137236-b68e436248de?fm=jpg&q=60&w=3000&auto=format&fit=crop" class="w-full h-full rounded-full object-cover" alt="Daniyal">
+                </div>
+            </div>
+
+            <!-- Greeting -->
+
+            <div class="leading-tight">
+                <p class="text-[10px] uppercase tracking-[0.2em] text-white/50">Welcome back</p>
+
+                <p class="font-semibold text-white text-sm">Daniyal Kaleem</p>
+            </div>
+        </div>
+
+        <!-- Right Side -->
+
+        <div class="flex items-center gap-5">
+            <!-- Logo -->
+
+            <img src="https://iili.io/BaXhKNa.md.png" alt="La Pasha Logo" class="h-9 md:h-10 object-contain opacity-95 hover:opacity-100 transition duration-300">
+
+            <!-- Notification -->
+
+            <button class="relative group">
+        <span class="material-symbols-outlined text-[#C5922F] text-[26px] group-hover:scale-110 transition">notifications</span>
+
+        <!-- Pulse Dot -->
+
+        <span class="absolute top-0 right-0 w-2.5 h-2.5 bg-[#C5922F] rounded-full">
+          <span class="absolute inset-0 rounded-full bg-[#C5922F] animate-ping opacity-75"></span>
+        </span>
+      </button>
+        </div>
+    </header>
+    <main class="pt-32 px-6 space-y-12 max-w-4xl mx-auto">
+        <!-- Loyalty Note -->
+
+        <section>
+            <div class="bg-surface-container-high/40 p-4 rounded-xl flex items-center gap-4 border border-outline-variant/10">
+                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined" data-icon="workspace_premium" data-weight="fill" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+                </div>
+
+                <div>
+                    <p class="text-sm font-semibold text-primary">Gold Members Priority</p>
+
+                    <p class="text-xs text-on-surface-variant">
+                        Gold Members get priority seating and a complimentary appetizer.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Selection -->
+
+        <section class="space-y-6">
+            <h2 class="font-serif text-xl tracking-tight text-on-surface">Select Location</h2>
+
+            <div class="flex overflow-x-auto gap-4 no-scrollbar pb-2 -mx-6 px-6">
+                <!-- Houston Lounge (Active) -->
+
+                <div class="flex-shrink-0 w-64 rounded-xl overflow-hidden relative border-2 border-primary group">
+                    <img class="w-full h-40 object-cover opacity-60" data-alt="Luxurious dark lounge interior with velvet seating, amber lighting, and a sophisticated bar in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS2wm3GqhrU_duOQNHnbxGqqOISDypmBCSgpDWMtzxhK5iRLcimTbHykLiiK2odsxpcHyq3MayFGnLqPLFQiox5iqsONFmxwGHlhGnkSgrGlI0wwDVo5LmJnWS0eAZwduKlEmjGmyH9LeohG39AYzRtB7-CgRMhlTOKSZaUu_aEvHEEnCuWbi55ql9d09JnA7d17MTVGaEYxWvj0ZFCefKNAq89gBGe_81oq1quOHExL8X5urDvU1jePE1V9OFcKQ2F9LtWbwnXAku">
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+
+                    <div class="absolute bottom-4 left-4">
+                        <p class="font-serif text-lg text-primary">Houston Lounge</p>
+
+                        <p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Downtown District</p>
+                    </div>
+                </div>
+
+                <!-- Dallas Lounge -->
+
+                <div class="flex-shrink-0 w-64 rounded-xl overflow-hidden relative border border-outline-variant/20 group hover:border-primary/50 transition-colors">
+                    <img class="w-full h-40 object-cover opacity-40" data-alt="Sleek modern restaurant interior with marble accents and soft warm pendant lights over dark tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcjEdzD_XZ4bv3p-jDu_9JraO-O_SlJFsW9-DJtqNqkvBrgSg9w6exIsc37sL97bWui_d08sR1OfpaPcauAKIJs1Ytr1aU4Jv3xTHyqBrSIL3_x-afBBN9XFCzqSoZVFmTt6lRS-ZcuKj7wvUcoqQbv8cdCWiAhHT2zPfR0Swg7jNHOh2fxZKhQfRK2CSNyjh4va6JEAwmIp_U60w4ExJLbyqnqxLu9Sbu85qpQwi22DpXaJPzv3ZrzXt4DFweX7YUUN4ULzyVv2fB">
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+
+                    <div class="absolute bottom-4 left-4">
+                        <p class="font-serif text-lg text-on-surface">Dallas Lounge</p>
+
+                        <p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Uptown Square</p>
+                    </div>
+                </div>
+
+                <!-- Patio -->
+
+                <div class="flex-shrink-0 w-64 rounded-xl overflow-hidden relative border border-outline-variant/20 group hover:border-primary/50 transition-colors">
+                    <img class="w-full h-40 object-cover opacity-40" data-alt="Elegant outdoor dining patio at night with hanging fairy lights and lush greenery surrounding dark furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLzDdvxHCNXO_TYTQlt5dH8BXWBCaXMeUYB2Y-YeHrHONA5hgXqgBrOsX9T2FLaLYESKl0sXEeCMxyjH84oAjrQAWbP093VbAmONiR8cD9ca5OVAVnLRWnmIrnIz2bvKgifXhvv9hBmCgeVN7VhJMFGOqx1oPgzv9e05VN9C5cX6EEeW4pr3-1A6t8GKFY9g2ZGS3k1rS3TiBoxve9AsJn2ov3vtVFFoorHTxTeF3VW2UGTPRjK9oWTWcWzKZgWbr4ohB7GDGDMyxO">
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+
+                    <div class="absolute bottom-4 left-4">
+                        <p class="font-serif text-lg text-on-surface">The Patio</p>
+
+                        <p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Al Fresco Dining</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Date Selection -->
+
+        <section class="space-y-6">
+            <div class="flex items-center justify-between">
+                <h2 class="font-serif text-xl tracking-tight text-on-surface">Preferred Date</h2>
+
+                <span class="text-xs uppercase tracking-widest text-primary font-bold">November 2024</span>
+            </div>
+
+            <div class="flex overflow-x-auto gap-3 no-scrollbar -mx-6 px-6">
+                <button class="flex-shrink-0 w-16 h-24 rounded-xl bg-surface-container-high flex flex-col items-center justify-center space-y-1 hover:bg-surface-container-highest transition-colors">
+                    <span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Mon</span>
+
+                    <span class="text-xl font-bold font-serif">14</span>
+                </button>
+
+                <button class="flex-shrink-0 w-16 h-24 rounded-xl bg-surface-container-high flex flex-col items-center justify-center space-y-1 hover:bg-surface-container-highest transition-colors">
+                    <span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Tue</span>
+
+                    <span class="text-xl font-bold font-serif">15</span>
+                </button>
+
+                <!-- Active Date -->
+
+                <button class="flex-shrink-0 w-16 h-24 rounded-xl metallic-sheen flex flex-col items-center justify-center space-y-1 shadow-[0_10px_30px_rgba(246,189,86,0.3)]">
+                    <span class="text-[10px] uppercase tracking-widest text-on-primary/70 font-bold">Wed</span>
+
+                    <span class="text-xl font-bold font-serif text-on-primary">16</span>
+                </button>
+
+                <button class="flex-shrink-0 w-16 h-24 rounded-xl bg-surface-container-high flex flex-col items-center justify-center space-y-1 hover:bg-surface-container-highest transition-colors">
+                    <span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Thu</span>
+
+                    <span class="text-xl font-bold font-serif">17</span>
+                </button>
+
+                <button class="flex-shrink-0 w-16 h-24 rounded-xl bg-surface-container-high flex flex-col items-center justify-center space-y-1 hover:bg-surface-container-highest transition-colors">
+                    <span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Fri</span>
+
+                    <span class="text-xl font-bold font-serif">18</span>
+                </button>
+
+                <button class="flex-shrink-0 w-16 h-24 rounded-xl bg-surface-container-high flex flex-col items-center justify-center space-y-1 hover:bg-surface-container-highest transition-colors">
+                    <span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Sat</span>
+
+                    <span class="text-xl font-bold font-serif">19</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Time Selection -->
+
+        <section class="space-y-6">
+            <h2 class="font-serif text-xl tracking-tight text-on-surface">Arrival Time</h2>
+
+            <div class="grid grid-cols-3 md:grid-cols-4 gap-3">
+                <button class="py-4 rounded-lg bg-surface-container-high text-sm font-medium hover:bg-surface-container-highest transition-colors border border-outline-variant/10">6:00 PM</button>
+
+                <button class="py-4 rounded-lg bg-surface-container-high text-sm font-medium hover:bg-surface-container-highest transition-colors border border-outline-variant/10">6:30 PM</button>
+
+                <button class="py-4 rounded-lg metallic-sheen text-on-primary text-sm font-bold shadow-[0_5px_15px_rgba(246,189,86,0.2)]">7:00 PM</button>
+
+                <button class="py-4 rounded-lg bg-surface-container-high text-sm font-medium hover:bg-surface-container-highest transition-colors border border-outline-variant/10">7:30 PM</button>
+
+                <button class="py-4 rounded-lg bg-surface-container-high text-sm font-medium hover:bg-surface-container-highest transition-colors border border-outline-variant/10">8:00 PM</button>
+
+                <button class="py-4 rounded-lg bg-surface-container-high text-sm font-medium hover:bg-surface-container-highest transition-colors border border-outline-variant/10">8:30 PM</button>
+
+                <button class="py-4 rounded-lg bg-surface-container-high text-sm font-medium hover:bg-surface-container-highest transition-colors border border-outline-variant/10">9:00 PM</button>
+
+                <button class="py-4 rounded-lg bg-surface-container-high text-sm font-medium hover:bg-surface-container-highest transition-colors border border-outline-variant/10">9:30 PM</button>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Guest Count -->
+
+            <section class="space-y-6">
+                <h2 class="font-serif text-xl tracking-tight text-on-surface">Number of Guests</h2>
+
+                <div class="flex items-center justify-between bg-surface-container-high p-2 rounded-full w-full max-w-[240px] border border-outline-variant/10">
+                    <button class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+                        <span
+                            class="material-symbols-outlined"
+                            data-icon="remove"
+                        >remove</span>
+                    </button>
+
+                    <span class="font-serif text-2xl font-bold">04</span>
+
+                    <button class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary hover:opacity-90 transition-opacity">
+                        <span
+                            class="material-symbols-outlined"
+                            data-icon="add"
+                        >add</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Table Preferences -->
+
+            <section class="space-y-6">
+                <h2 class="font-serif text-xl tracking-tight text-on-surface">Seating Area</h2>
+
+                <div class="flex flex-wrap gap-3">
+                    <button class="px-6 py-3 rounded-full bg-primary/10 border border-primary text-primary text-sm font-bold tracking-wide uppercase">Indoor</button>
+
+                    <button class="px-6 py-3 rounded-full bg-surface-container-high border border-outline-variant/30 text-on-surface-variant text-sm font-medium tracking-wide uppercase hover:border-primary/50 transition-colors">Outdoor</button>
+
+                    <button class="px-6 py-3 rounded-full bg-surface-container-high border border-outline-variant/30 text-on-surface-variant text-sm font-medium tracking-wide uppercase hover:border-primary/50 transition-colors">Private Area</button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Special Requests -->
+
+        <section class="space-y-6">
+            <h2 class="font-serif text-xl tracking-tight text-on-surface">Special Requests</h2>
+
+            <div class="relative">
+                <textarea class="w-full bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-xl p-6 text-on-surface placeholder:text-on-surface-variant/40 min-h-[120px] transition-all resize-none" placeholder="Anniversary, dietary requirements, or preferred table..."></textarea>
+            </div>
+        </section>
+
+        <!-- Confirmation Summary -->
+
+        <section class="bg-surface-container-lowest p-8 rounded-2xl space-y-6 border border-outline-variant/10">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-lg metallic-sheen flex items-center justify-center text-on-primary">
+                    <span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+                </div>
+
+                <div>
+                    <h3 class="font-serif text-lg text-on-surface">Booking Summary</h3>
+
+                    <p class="text-xs text-on-surface-variant tracking-wider uppercase">Houston Lounge</p>
+                </div>
+            </div>
+
+            <div class="space-y-4 pt-4 border-t border-outline-variant/10">
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-on-surface-variant">Date &amp; Time</span>
+
+                    <span class="text-sm font-bold text-on-surface">Wed, Nov 16 • 7:00 PM</span>
+                </div>
+
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-on-surface-variant">Party Size</span>
+
+                    <span class="text-sm font-bold text-on-surface">4 Guests • Indoor</span>
+                </div>
+
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-on-surface-variant">Deposit Requirement</span>
+
+                    <span class="text-sm font-bold text-primary">None</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Primary CTA -->
+
+        <section class="pt-6">
+            <button class="w-full metallic-sheen py-6 rounded-xl text-on-primary font-bold text-lg tracking-[0.2em] uppercase shadow-[0_20px_50px_rgba(246,189,86,0.2)] active:scale-[0.98] transition-all duration-300">Confirm Reservation</button>
+
+            <p class="text-center text-[10px] text-on-surface-variant mt-6 uppercase tracking-widest opacity-50">
+                By confirming you agree to our booking policy
+            </p>
+        </section>
+    </main>
+
+    <!-- BottomNavBar -->
+
+    <nav class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-md bg-gradient-to-b from-[#242525]/90 to-[#242525]/70 backdrop-blur-2xl border border-white/10 rounded-2xl px-6 py-3 flex justify-between items-center shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
+        <!-- Home (Active) -->
+
+        <a href="./index.html" class="relative flex flex-col items-center justify-center text-[#C5922F]">
+            <!-- Active Glow -->
+            <div class="absolute -top-3 w-10 h-10 bg-[#C5922F]/20 blur-xl rounded-full"></div>
+
+            <span class="material-symbols-outlined text-[26px]" style="font-variation-settings: 'FILL' 1;">home</span>
+
+            <span class="text-[9px] tracking-[0.2em] uppercase mt-1">Home</span>
+        </a>
+
+        <!-- Locations -->
+
+        <a href="./Explore.html" class="flex flex-col items-center text-white/50 hover:text-[#C5922F] transition duration-300 hover:scale-110">
+            <span class="material-symbols-outlined text-[24px]">Pin_Drop</span>
+        </a>
+
+        <!-- Menu -->
+
+        <a href="./Menu.html" class="flex flex-col items-center text-white/50 hover:text-[#C5922F] transition duration-300 hover:scale-110">
+            <span class="material-symbols-outlined text-[24px]">Restaurant</span>
+        </a>
+
+        <!-- Wallet -->
+
+        <a href="./Wallet.html" class="flex flex-col items-center text-white/50 hover:text-[#C5922F] transition duration-300 hover:scale-110">
+            <span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+        </a>
+
+        <!-- Profile -->
+
+        <a href="./Profile.html" class="flex flex-col items-center text-white/50 hover:text-[#C5922F] transition duration-300 hover:scale-110">
+            <span class="material-symbols-outlined text-[24px]">person</span>
+        </a>
+    </nav>
+</body>
+
+</html>

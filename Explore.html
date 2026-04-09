@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8"></meta>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+
+    <title>Explore La Pasha</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"></link>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"></link>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"></link>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#7d5700",
+                        "surface-container-high": "#2a2a2a",
+                        "outline-variant": "#4f4536",
+                        "secondary": "#c8c6c5",
+                        "on-primary": "#422c00",
+                        "tertiary": "#c6c6c7",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1b1b1b",
+                        "surface-bright": "#393939",
+                        "primary-fixed-dim": "#f6bd56",
+                        "surface": "#131313",
+                        "on-primary-container": "#452e00",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "primary-fixed": "#ffdeaa",
+                        "inverse-surface": "#e2e2e2",
+                        "surface-container-highest": "#353535",
+                        "on-primary-fixed": "#271900",
+                        "surface-dim": "#131313",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-surface-variant": "#d3c4b0",
+                        "on-secondary-fixed-variant": "#474746",
+                        "inverse-on-surface": "#303030",
+                        "tertiary-container": "#9a9b9b",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-variant": "#353535",
+                        "on-surface": "#e2e2e2",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-tertiary-container": "#313333",
+                        "on-error-container": "#ffdad6",
+                        "surface-tint": "#f6bd56",
+                        "outline": "#9c8f7d",
+                        "on-secondary-container": "#b7b5b4",
+                        "on-primary-fixed-variant": "#5f4100",
+                        "on-secondary": "#313030",
+                        "on-background": "#e2e2e2",
+                        "error-container": "#93000a",
+                        "background": "#131313",
+                        "primary": "#f6bd56",
+                        "surface-container": "#1f1f1f",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "secondary-container": "#474746",
+                        "primary-container": "#c5922f",
+                        "on-tertiary": "#2f3131",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-secondary-fixed": "#1c1b1b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+
+    style style
+</head>
+
+<body class="bg-black text-on-surface">
+    <!-- Top AppBar (JSON Structure) -->
+
+    <header class="fixed top-0 left-0 w-full z-50 
+bg-gradient-to-b from-[#242525]/90 to-[#242525]/40 
+backdrop-blur-xl border-b border-white/5 
+px-6 py-3 flex items-center justify-between shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
+        <!-- Left: Profile -->
+
+        <div class="flex items-center gap-3">
+            <!-- Avatar with Glow -->
+
+            <div class="relative">
+                <div class="absolute inset-0 rounded-full bg-[#C5922F]/30 blur-md"></div>
+
+                <div class="relative w-11 h-11 rounded-full border border-[#C5922F]/40 p-[2px]">
+                    <img src="https://plus.unsplash.com/premium_photo-1689539137236-b68e436248de?fm=jpg&q=60&w=3000&auto=format&fit=crop" class="w-full h-full rounded-full object-cover" alt="Daniyal">
+                </div>
+            </div>
+
+            <!-- Greeting -->
+
+            <div class="leading-tight">
+                <p class="text-[10px] uppercase tracking-[0.2em] text-white/50">Welcome back</p>
+
+                <p class="font-semibold text-white text-sm">Daniyal Kaleem</p>
+            </div>
+        </div>
+
+        <!-- Right Side -->
+
+        <div class="flex items-center gap-5">
+            <!-- Logo -->
+
+            <img src="https://iili.io/BaXhKNa.md.png" alt="La Pasha Logo" class="h-9 md:h-10 object-contain opacity-95 hover:opacity-100 transition duration-300">
+
+            <!-- Notification -->
+
+            <button class="relative group">
+        <span class="material-symbols-outlined text-[#C5922F] text-[26px] group-hover:scale-110 transition">notifications</span>
+
+        <!-- Pulse Dot -->
+
+        <span class="absolute top-0 right-0 w-2.5 h-2.5 bg-[#C5922F] rounded-full">
+          <span class="absolute inset-0 rounded-full bg-[#C5922F] animate-ping opacity-75"></span>
+        </span>
+      </button>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-32 px-6">
+        <!-- Header Subtext -->
+
+        <div class="mb-8">
+            <p class="text-on-surface-variant font-body text-sm tracking-wide">
+                Find your nearest La Pasha experience
+            </p>
+        </div>
+
+        <!-- Search Bar -->
+
+        <div class="relative mb-6">
+            <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+                <span class="material-symbols-outlined text-outline text-lg">search</span>
+            </div>
+
+            <input class="w-full bg-surface-container-low border-none rounded-xl py-4 pl-12 pr-12 text-on-surface placeholder:text-outline/60 focus:ring-1 focus:ring-primary-container transition-all" placeholder="Search by location or restaurant name" type="text"></input>
+
+            <div class="absolute inset-y-0 right-4 flex items-center">
+                <span class="material-symbols-outlined text-primary cursor-pointer">my_location</span>
+            </div>
+        </div>
+
+        <!-- Filter Chips -->
+
+        <div class="flex gap-3 overflow-x-auto pb-4 mb-8 no-scrollbar">
+            <button class="flex-shrink-0 px-6 py-2 rounded-full bg-primary text-on-primary font-medium text-sm transition-all shadow-[0_0_15px_rgba(246,189,86,0.3)]">Near Me</button>
+
+            <button class="flex-shrink-0 px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant border border-outline-variant/20 font-medium text-sm hover:bg-surface-container-highest transition-all">Lounge</button>
+
+            <button class="flex-shrink-0 px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant border border-outline-variant/20 font-medium text-sm hover:bg-surface-container-highest transition-all">Cafe</button>
+
+            <button class="flex-shrink-0 px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant border border-outline-variant/20 font-medium text-sm hover:bg-surface-container-highest transition-all">Patio</button>
+
+            <button class="flex-shrink-0 px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant border border-outline-variant/20 font-medium text-sm hover:bg-surface-container-highest transition-all">Fine Dining</button>
+        </div>
+
+        <!-- Map View Section -->
+
+        <div class="relative w-full h-64 rounded-2xl overflow-hidden mb-10 shadow-2xl group">
+
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4109.419934161361!2d-95.58809389999999!3d29.738211699999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640dd0c93653e6f%3A0x2de5b6f02b707c9a!2sLa%20Pasha%20Lounge%20%26%20Grill!5e1!3m2!1sen!2s!4v1775651061602!5m2!1sen!2s"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+
+        <!-- Featured Section -->
+
+        <div class="mb-12 relative group">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-primary-container to-primary opacity-20 blur group-hover:opacity-30 transition duration-1000"></div>
+
+            <div class="relative bg-surface-container-low rounded-2xl overflow-hidden shadow-2xl">
+                <div class="h-48 relative overflow-hidden">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="dramatic interior of a luxury lounge with warm gold lighting, plush velvet seating and crystal chandeliers" src="https://popmenucloud.com/cdn-cgi/image/width%3D1920%2Cheight%3D1920%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/fjecxikp/aebbce99-5b5d-4d15-967e-c01fe6eac382.png">
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+                </div>
+
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-primary bg-primary/10 px-2 py-1 rounded">Editor's Choice</span>
+                    </div>
+
+                    <h3 class="serif-headline text-2xl font-bold text-on-surface mb-3 leading-tight">
+                        Experience Luxury Dining at La Pasha Lounge – Houston
+                    </h3>
+
+                    <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+                        Indulge in our signature charcoal grilled delights within an atmosphere designed for the sophisticated palate.
+                    </p>
+
+                    <button onclick="window.location.href='reservation.html'" class="w-full bg-gradient-to-r from-primary-container to-primary text-on-primary font-bold py-3 rounded-xl tracking-widest uppercase text-xs shadow-lg active:scale-95 transition-all">Book This Experience</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Location Cards List -->
+
+        <div class="space-y-10">
+            <!-- Card 1 -->
+
+            <div class="bg-surface-container rounded-2xl overflow-hidden shadow-xl border border-outline-variant/5">
+                <div class="flex h-40">
+                    <div class="w-1/3">
+                        <img class="w-full h-full object-cover" data-alt="close-up of a perfectly plated Mediterranean dish with gold accents and dark slate background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkuHLeoiy2WPnSLg3Q6BUJa1E8GY9zCUQ5IjEjHBPH3wQUY5qQ35kuRIUT7Y3XIblBct_66riGAOXYlQsp6UMux7Xlo8-zMrXCzpKVD7G4-rsNvljvtIUePr-odIaYt0_fMXAAs9QIhVHodJlg-0b6SzIgy951Vna5tY1aOhOoKnEzTYcaDmrx1dfid9n8eCCZAErH6Lz0RiqRKIIF5GXrStKegklpEaRHNWb_dGgTTMlKv-96g5S28DtXZTIq7tGh9RSMfGU6unhG">
+                    </div>
+
+                    <div class="w-2/3 p-4 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-1">
+                                <span class="text-[10px] font-semibold text-primary uppercase tracking-wider">Lounge</span>
+
+                                <span class="text-[10px] text-green-400 font-bold uppercase">Open Now</span>
+                            </div>
+
+                            <h4 class="serif-headline text-lg font-bold text-on-surface leading-snug">
+                                La Pasha Lounge &amp; Grill - Houston
+                            </h4>
+
+                            <div class="flex items-center gap-1 mt-1">
+                                <span class="material-symbols-outlined text-[14px] text-outline">near_me</span>
+
+                                <span class="text-xs text-on-surface-variant">2.5 km away</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                            <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+
+                            <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+
+                            <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+
+                            <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+
+                            <span class="material-symbols-outlined text-primary text-sm">star</span>
+
+                            <span class="text-[10px] text-outline ml-1">(2.1k reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-px bg-outline-variant/10 border-t border-outline-variant/10">
+                    <button onclick="window.location.href='restaurant.html'" class="bg-surface py-3 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">View Details</button>
+
+                    <button class="bg-surface py-3 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">Get Directions</button>
+
+                    <button class="bg-surface py-3 text-[10px] font-bold uppercase tracking-widest text-primary border-t border-outline-variant/10 hover:bg-primary/5 transition-colors">Reserve Table</button>
+
+                    <button class="bg-surface py-3 text-[10px] font-bold uppercase tracking-widest text-primary border-t border-outline-variant/10 hover:bg-primary/5 transition-colors">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+
+            <div class="bg-surface-container rounded-2xl overflow-hidden shadow-xl border border-outline-variant/5">
+                <div class="flex h-40">
+                    <div class="w-1/3">
+                        <img class="w-full h-full object-cover" data-alt="outdoor elegant patio setting at dusk with string lights and white tablecloths" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyxhH0CMlaHmtpoTpzMAJQWAER2c4I_4_QKtKeK1Czt2ZSAC28GsWqWIGfQl1VxrX5qFLOf1zxa-Wx2V8WANgGS4XMtvsjgNnmWR7lKQfxN_tFfUB3lNt_N8joZHJ4j44OwK-7CUAGDK_hhXLWvlqmTL0NAn7TVcEZMIaC0_RHR-dR26HIhdqbabiX4Z8hyQf3-iKixgrlMpsZc8s0uzHgx8gQpUh6S58e2qKXHAbwSlw9czdEBNAJU1U3nflVXuBfIEpdXOrc0EpD">
+                    </div>
+
+                    <div class="w-2/3 p-4 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-1">
+                                <span class="text-[10px] font-semibold text-primary uppercase tracking-wider">Patio</span>
+
+                                <span class="text-[10px] text-green-400 font-bold uppercase">Open Now</span>
+                            </div>
+
+                            <h4 class="serif-headline text-lg font-bold text-on-surface leading-snug">Patio By La Pasha - Houston</h4>
+
+                            <div class="flex items-center gap-1 mt-1">
+                                <span class="material-symbols-outlined text-[14px] text-outline">near_me</span>
+
+                                <span class="text-xs text-on-surface-variant">4.1 km away</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                            <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+
+                            <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+
+                            <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+
+                            <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+
+                            <span class="material-symbols-outlined text-outline text-sm">star</span>
+
+                            <span class="text-[10px] text-outline ml-1">(942 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-px bg-outline-variant/10 border-t border-outline-variant/10">
+                    <button onclick="window.location.href='restaurant.html'" class="bg-surface py-3 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">View Details</button>
+
+                    <button class="bg-surface py-3 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Get Directions</button>
+
+                    <button class="bg-surface py-3 text-[10px] font-bold uppercase tracking-widest text-primary border-t border-outline-variant/10">Reserve Table</button>
+
+                    <button class="bg-surface py-3 text-[10px] font-bold uppercase tracking-widest text-primary border-t border-outline-variant/10">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+
+            <div class="bg-surface-container rounded-2xl overflow-hidden shadow-xl border border-outline-variant/5">
+                <div class="flex h-40">
+                    <div class="w-1/3">
+                        <img class="w-full h-full object-cover" data-alt="interior of a modern high-end cafe with marble counters and gold decorative elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE5xrykpb91n-Lx2RUWWQTN6vD2fuB02IfOtcPkV-yqtErbwl5Bj0WmHucZsfeE2rWeahZ4mUSeMZlPy8yGC_URRGDYjiaiBjZJS5igo7yB0VmPV19SO86erDhnxPxWGx_8tdC1bm4OthiHwdpCOBLXwMZMgi0kIOljA0VfUXek9U0XJNCSDFyIUoMEyOH8v8a9O2PT0IXcYiLTtatVJoMyd6ofVdY6eqMfCfaf6OiZaAZ3cG-WZngNxzpFck4Bw5Fw8fsLweJek2X">
+                    </div>
+
+                    <div class="w-2/3 p-4 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-1">
+                                <span class="text-[10px] font-semibold text-primary uppercase tracking-wider">Cafe</span>
+
+                                <span class="text-[10px] text-green-400 font-bold uppercase">Open Now</span>
+                            </div>
+
+                            <h4 class="serif-headline text-lg font-bold text-on-surface leading-snug">Nara Cafe - Houston</h4>
+
+                            <div class="flex items-center gap-1 mt-1">
+                                <span class="material-symbols-outlined text-[14px] text-outline">near_me</span>
+
+                                <span class="text-xs text-on-surface-variant">1.2 km away</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                            <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+
+                            <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+
+                            <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+
+                            <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+
+                            <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+
+                            <span class="text-[10px] text-outline ml-1">(1.5k reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-px bg-outline-variant/10 border-t border-outline-variant/10">
+                    <button onclick="window.location.href='restaurant.html'" class="bg-surface py-3 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">View Details</button>
+
+                    <button class="bg-surface py-3 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Get Directions</button>
+
+                    <button class="bg-surface py-3 text-[10px] font-bold uppercase tracking-widest text-primary border-t border-outline-variant/10">Reserve Table</button>
+
+                    <button class="bg-surface py-3 text-[10px] font-bold uppercase tracking-widest text-primary border-t border-outline-variant/10">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- BottomNavBar -->
+
+    <nav class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-md bg-gradient-to-b from-[#242525]/90 to-[#242525]/70 backdrop-blur-2xl border border-white/10 rounded-2xl px-6 py-3 flex justify-between items-center shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
+        <!-- Home (Active) -->
+
+        <a href="./index.html" class="flex flex-col items-center text-white/50 hover:text-[#C5922F] transition duration-300 hover:scale-110">
+
+            <span class="material-symbols-outlined text-[26px]" style="font-variation-settings: 'FILL' 1;">home</span>
+        </a>
+
+        <!-- Locations -->
+
+        <a href="./Explore.html" class="relative flex flex-col items-center justify-center text-[#C5922F]">
+            <span class="material-symbols-outlined text-[24px]">Pin_Drop</span>
+            <div class="material-symbols-outlined text-[24px]"></div>
+            <span class="text-[9px] tracking-[0.2em] uppercase mt-1">Locations</span>
+        </a>
+
+        <!-- Menu -->
+
+        <a href="./Menu.html" class="flex flex-col items-center text-white/50 hover:text-[#C5922F] transition duration-300 hover:scale-110">
+            <span class="material-symbols-outlined text-[24px]">Restaurant</span>
+        </a>
+
+        <!-- Wallet -->
+
+        <a href="./Wallet.html" class="flex flex-col items-center text-white/50 hover:text-[#C5922F] transition duration-300 hover:scale-110">
+            <span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+        </a>
+
+        <!-- Profile -->
+
+        <a href="./Profile.html" class="flex flex-col items-center text-white/50 hover:text-[#C5922F] transition duration-300 hover:scale-110">
+            <span class="material-symbols-outlined text-[24px]">person</span>
+        </a>
+    </nav>
+</body>
+
+</html>

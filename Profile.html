@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8"></meta>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"></link>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"></link>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"></link>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#c6c6c7",
+                        "on-tertiary-container": "#313333",
+                        "on-error": "#690005",
+                        "primary": "#f6bd56",
+                        "error-container": "#93000a",
+                        "on-background": "#e2e2e2",
+                        "surface-container-high": "#2a2a2a",
+                        "on-tertiary": "#2f3131",
+                        "background": "#131313",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-secondary-container": "#b7b5b4",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-bright": "#393939",
+                        "surface-dim": "#131313",
+                        "primary-fixed-dim": "#f6bd56",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "primary-fixed": "#ffdeaa",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-primary-container": "#452e00",
+                        "on-primary-fixed": "#271900",
+                        "on-surface": "#e2e2e2",
+                        "inverse-surface": "#e2e2e2",
+                        "surface-container": "#1f1f1f",
+                        "outline": "#9c8f7d",
+                        "secondary": "#c8c6c5",
+                        "surface-container-highest": "#353535",
+                        "on-secondary-fixed-variant": "#474746",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-secondary": "#313030",
+                        "on-surface-variant": "#d3c4b0",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary": "#422c00",
+                        "surface": "#131313",
+                        "inverse-primary": "#7d5700",
+                        "surface-tint": "#f6bd56",
+                        "primary-container": "#c5922f",
+                        "on-primary-fixed-variant": "#5f4100",
+                        "surface-container-low": "#1b1b1b",
+                        "inverse-on-surface": "#303030",
+                        "tertiary-container": "#9a9b9b",
+                        "outline-variant": "#4f4536",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-variant": "#353535",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#474746"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+
+    style style
+</head>
+
+<body class="bg-background text-on-background min-h-screen pb-28">
+    <!-- TopAppBar -->
+
+    <header class="fixed top-0 left-0 w-full z-50 
+bg-gradient-to-b from-[#242525]/90 to-[#242525]/40 
+backdrop-blur-xl border-b border-white/5 
+px-6 py-3 flex items-center justify-between shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
+        <!-- Left: Profile -->
+
+        <div class="flex items-center gap-3">
+            <!-- Avatar with Glow -->
+
+            <div class="relative">
+                <div class="absolute inset-0 rounded-full bg-[#C5922F]/30 blur-md"></div>
+
+                <div class="relative w-11 h-11 rounded-full border border-[#C5922F]/40 p-[2px]">
+                    <img src="https://plus.unsplash.com/premium_photo-1689539137236-b68e436248de?fm=jpg&q=60&w=3000&auto=format&fit=crop" class="w-full h-full rounded-full object-cover" alt="Daniyal">
+                </div>
+            </div>
+
+            <!-- Greeting -->
+
+            <div class="leading-tight">
+                <p class="text-[10px] uppercase tracking-[0.2em] text-white/50">Welcome back</p>
+
+                <p class="font-semibold text-white text-sm">Daniyal Kaleem</p>
+            </div>
+        </div>
+
+        <!-- Right Side -->
+
+        <div class="flex items-center gap-5">
+            <!-- Logo -->
+
+            <img src="https://iili.io/BaXhKNa.md.png" alt="La Pasha Logo" class="h-9 md:h-10 object-contain opacity-95 hover:opacity-100 transition duration-300">
+
+            <!-- Notification -->
+
+            <button class="relative group">
+        <span class="material-symbols-outlined text-[#C5922F] text-[26px] group-hover:scale-110 transition">notifications</span>
+
+        <!-- Pulse Dot -->
+
+        <span class="absolute top-0 right-0 w-2.5 h-2.5 bg-[#C5922F] rounded-full">
+          <span class="absolute inset-0 rounded-full bg-[#C5922F] animate-ping opacity-75"></span>
+        </span>
+      </button>
+        </div>
+    </header>
+
+    <main class="pt-24 px-6 space-y-10">
+        <!-- Profile Header Text -->
+
+        <section class="space-y-1">
+            <p class="text-on-surface-variant font-label text-sm tracking-widest uppercase">Manage your account</p>
+        </section>
+
+        <!-- Hero User Info Card -->
+
+        <section class="glass-card rounded-xl p-6 relative overflow-hidden">
+            <div class="flex items-center gap-5 relative z-10">
+                <div class="relative">
+                    <img alt="Daniyal Kaleem" class="w-20 h-20 rounded-full object-cover border-2 border-primary-container" data-alt="Close-up professional portrait of a stylish man in a dark environment with warm, moody lighting reflecting on his face" src="https://plus.unsplash.com/premium_photo-1689539137236-b68e436248de?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFuJTIwYXZhdGFyfGVufDB8fDB8fHww">
+
+                    <div class="absolute -bottom-1 -right-1 bg-primary rounded-full p-1 border-2 border-background">
+                        <span class="material-symbols-outlined text-on-primary-container text-[14px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+                    </div>
+                </div>
+
+                <div class="space-y-1">
+                    <h2 class="serif-text text-2xl font-bold text-on-background">Daniyal Kaleem</h2>
+
+                    <p class="text-on-surface-variant text-sm font-light">daniyal.k@example.com</p>
+                </div>
+            </div>
+
+            <!-- Loyalty Progress -->
+
+            <div class="mt-8 space-y-4">
+                <div class="flex justify-between items-end">
+                    <div class="flex items-center gap-2">
+                        <span class="text-primary text-xs font-bold tracking-widest uppercase">Silver Tier</span>
+                    </div>
+
+                    <span class="text-on-surface-variant text-[10px] uppercase tracking-tighter">750 / 1000 to Gold</span>
+                </div>
+
+                <div class="w-full h-[3px] bg-surface-container-highest rounded-full overflow-hidden">
+                    <div class="h-full gold-shimmer w-3/4 rounded-full"></div>
+                </div>
+
+                <button class="w-full flex items-center justify-center gap-2 pt-2 text-[#C5922F] text-xs font-semibold tracking-widest uppercase hover:opacity-80 transition-opacity">
+          View Full Loyalty Details
+
+          <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+        </button>
+            </div>
+
+            <!-- Background Decoration -->
+            <div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
+        </section>
+
+        <!-- Account Settings Group -->
+
+        <section class="space-y-4">
+            <h3 class="text-on-surface-variant text-[11px] font-bold tracking-[0.2em] uppercase px-2">Account Settings</h3>
+
+            <div class="space-y-1">
+                <div class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors group cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">person</span>
+
+                        <span class="text-sm font-medium">Personal Information</span>
+                    </div>
+
+                    <span class="material-symbols-outlined text-[#C5922F] text-sm">arrow_forward_ios</span>
+                </div>
+
+                <div class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors group cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">location_on</span>
+
+                        <span class="text-sm font-medium">My Addresses</span>
+                    </div>
+
+                    <span class="material-symbols-outlined text-[#C5922F] text-sm">arrow_forward_ios</span>
+                </div>
+
+                <div class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors group cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">payments</span>
+
+                        <span class="text-sm font-medium">Payment Methods</span>
+                    </div>
+
+                    <span class="material-symbols-outlined text-[#C5922F] text-sm">arrow_forward_ios</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activity Group -->
+
+        <section class="space-y-4">
+            <h3 class="text-on-surface-variant text-[11px] font-bold tracking-[0.2em] uppercase px-2">Activity</h3>
+
+            <div class="space-y-1">
+                <div class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors group cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">receipt_long</span>
+
+                        <span class="text-sm font-medium">My Orders</span>
+                    </div>
+
+                    <span class="material-symbols-outlined text-[#C5922F] text-sm">arrow_forward_ios</span>
+                </div>
+
+                <div class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors group cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">event_seat</span>
+
+                        <span class="text-sm font-medium">Reservations</span>
+                    </div>
+
+                    <span class="material-symbols-outlined text-[#C5922F] text-sm">arrow_forward_ios</span>
+                </div>
+
+                <div class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors group cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">history_edu</span>
+
+                        <span class="text-sm font-medium">Point Transactions</span>
+                    </div>
+
+                    <span class="material-symbols-outlined text-[#C5922F] text-sm">arrow_forward_ios</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loyalty & Rewards -->
+
+        <section class="space-y-4">
+            <h3 class="text-on-surface-variant text-[11px] font-bold tracking-[0.2em] uppercase px-2">Loyalty &amp; Rewards</h3>
+
+            <div class="space-y-1">
+                <div class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors group cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">account_balance_wallet</span>
+
+                        <span class="text-sm font-medium">My Wallet</span>
+                    </div>
+
+                    <span class="material-symbols-outlined text-[#C5922F] text-sm">arrow_forward_ios</span>
+                </div>
+
+                <div class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors group cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">stars</span>
+
+                        <span class="text-sm font-medium">Claim Points</span>
+                    </div>
+
+                    <span class="material-symbols-outlined text-[#C5922F] text-sm">arrow_forward_ios</span>
+                </div>
+
+                <div class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors group cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">military_tech</span>
+
+                        <span class="text-sm font-medium">Rewards History</span>
+
+                        <div class="w-2 h-2 rounded-full bg-primary animate-pulse ml-1"></div>
+                    </div>
+
+                    <span class="material-symbols-outlined text-[#C5922F] text-sm">arrow_forward_ios</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Referral Bonus Card -->
+
+        <section class="bg-primary rounded-xl p-6 flex items-center justify-between">
+            <div class="space-y-1">
+                <h4 class="text-on-primary-container font-bold serif-text leading-tight">
+                    Invite friends &amp;
+
+                    <br> earn rewards
+                </h4>
+
+                <p class="text-on-primary-container/80 text-[10px] font-semibold tracking-wider uppercase">Unlock Platinum Tier Together</p>
+            </div>
+
+            <button class="bg-on-primary-container text-primary-fixed px-6 py-3 rounded-lg text-xs font-bold tracking-widest uppercase hover:opacity-90 active:scale-95 transition-all">Invite Now</button>
+        </section>
+
+        <!-- Preferences Section -->
+
+        <section class="space-y-6">
+            <h3 class="text-on-surface-variant text-[11px] font-bold tracking-[0.2em] uppercase px-2">Preferences</h3>
+
+            <div class="space-y-6 px-4">
+                <div class="flex items-center justify-between">
+                    <span class="text-sm font-medium">Favorite Locations</span>
+
+                    <span class="material-symbols-outlined text-[#C5922F]">chevron_right</span>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <div class="space-y-0.5">
+                        <span class="text-sm font-medium">Dietary Preferences</span>
+
+                        <p class="text-[10px] text-on-surface-variant">Halal, Spicy</p>
+                    </div>
+
+                    <span class="material-symbols-outlined text-[#C5922F]">chevron_right</span>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <span class="text-sm font-medium">Notification Settings</span>
+
+                    <div class="w-10 h-5 bg-primary-container rounded-full relative cursor-pointer shadow-inner">
+                        <div class="absolute right-0.5 top-0.5 w-4 h-4 bg-on-background rounded-full shadow-sm"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Account Actions -->
+
+        <section class="pt-8 pb-12 flex flex-col items-center gap-6">
+            <button class="text-on-surface-variant text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors transition-opacity">Log Out</button>
+
+            <button class="text-on-surface-variant/40 text-[10px] font-bold tracking-widest uppercase hover:text-error transition-colors">Delete Account</button>
+        </section>
+    </main>
+
+    <!-- BottomNavBar -->
+
+    <nav class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-md bg-gradient-to-b from-[#242525]/90 to-[#242525]/70 backdrop-blur-2xl border border-white/10 rounded-2xl px-6 py-3 flex justify-between items-center shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
+        <!-- Home (Active) -->
+
+        <a href="./index.html" class="flex flex-col items-center text-white/50 hover:text-[#C5922F] transition duration-300 hover:scale-110">
+            <span class="material-symbols-outlined text-[26px]" style="font-variation-settings: 'FILL' 1;">home</span>
+        </a>
+
+        <!-- Locations -->
+
+        <a href="./Explore.html" class="flex flex-col items-center text-white/50 hover:text-[#C5922F] transition duration-300 hover:scale-110">
+            <span class="material-symbols-outlined text-[24px]">Pin_Drop</span>
+        </a>
+
+        <!-- Menu -->
+
+        <a href="./Menu.html" class="flex flex-col items-center text-white/50 hover:text-[#C5922F] transition duration-300 hover:scale-110">
+            <span class="material-symbols-outlined text-[24px]">Restaurant</span>
+        </a>
+
+        <!-- Wallet -->
+
+        <a href="./Wallet.html" class="flex flex-col items-center text-white/50 hover:text-[#C5922F] transition duration-300 hover:scale-110">
+            <span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+        </a>
+
+        <!-- Profile -->
+
+        <a href="./Profile.html" class="relative flex flex-col items-center justify-center text-[#C5922F]">
+            <span class="material-symbols-outlined text-[24px]">person</span>
+            <div class="absolute -top-3 w-10 h-10 bg-[#C5922F]/20 blur-xl rounded-full"></div>
+            <span class="text-[9px] tracking-[0.2em] uppercase mt-1">Profile</span>
+        </a>
+    </nav>
+</body>
+
+</html>
